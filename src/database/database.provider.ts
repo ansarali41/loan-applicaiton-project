@@ -16,7 +16,7 @@ export const databaseProviders = [
         provide: 'SEQUELIZE',
         useFactory: async (): Promise<Sequelize> => {
             sequelize.addModels([User, Applicants, Applications]);
-            await sequelize.sync({ alter: true });
+            // await sequelize.sync({ alter: true });
             return sequelize;
         },
     },
